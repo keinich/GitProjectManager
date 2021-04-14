@@ -27,13 +27,13 @@ namespace GitProjectManagerApi {
         c.SwaggerDoc("v1", new OpenApiInfo { Title = "GitProjectManagerApi", Version = "v1" });
       });
 
-      //services.AddDbContext<GitProjectManagerDbContext>(
-      //  x => x.UseSqlServer(Configuration.GetConnectionString("ProductionConnetion"))
-      //);
-
       services.AddDbContext<GitProjectManagerDbContext>(
-        x => x.UseSqlServer(Configuration.GetConnectionString("DefaultConnetion"))
+        x => x.UseSqlServer(Configuration.GetConnectionString("ProductionConnetion"))
       );
+
+      //services.AddDbContext<GitProjectManagerDbContext>(
+      //  x => x.UseSqlServer(Configuration.GetConnectionString("DefaultConnetion"))
+      //);
 
       services.AddScoped<IWorkItemRepository, WorkItemRepository>();
   
