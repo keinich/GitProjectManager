@@ -1,0 +1,12 @@
+D:\Raftek\GitProjectManager\GitProjectManager.Core\bin\Debug\net5.0\GitProjectManager.Core.deps.json
+D:\Raftek\GitProjectManager\GitProjectManager.Core\bin\Debug\net5.0\GitProjectManager.Core.dll
+D:\Raftek\GitProjectManager\GitProjectManager.Core\bin\Debug\net5.0\ref\GitProjectManager.Core.dll
+D:\Raftek\GitProjectManager\GitProjectManager.Core\bin\Debug\net5.0\GitProjectManager.Core.pdb
+D:\Raftek\GitProjectManager\GitProjectManager.Core\obj\Debug\net5.0\GitProjectManager.Core.csprojAssemblyReference.cache
+D:\Raftek\GitProjectManager\GitProjectManager.Core\obj\Debug\net5.0\GitProjectManager.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Raftek\GitProjectManager\GitProjectManager.Core\obj\Debug\net5.0\GitProjectManager.Core.AssemblyInfoInputs.cache
+D:\Raftek\GitProjectManager\GitProjectManager.Core\obj\Debug\net5.0\GitProjectManager.Core.AssemblyInfo.cs
+D:\Raftek\GitProjectManager\GitProjectManager.Core\obj\Debug\net5.0\GitProjectManager.Core.csproj.CoreCompileInputs.cache
+D:\Raftek\GitProjectManager\GitProjectManager.Core\obj\Debug\net5.0\GitProjectManager.Core.dll
+D:\Raftek\GitProjectManager\GitProjectManager.Core\obj\Debug\net5.0\ref\GitProjectManager.Core.dll
+D:\Raftek\GitProjectManager\GitProjectManager.Core\obj\Debug\net5.0\GitProjectManager.Core.pdb

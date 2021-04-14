@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitProjectManagerApi", "GitProjectManagerApi\GitProjectManagerApi.csproj", "{FCC5F42D-7D4D-442E-8E3B-3EB9591A792E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitProjectManager.WebApi", "GitProjectManagerApi\GitProjectManager.WebApi.csproj", "{FCC5F42D-7D4D-442E-8E3B-3EB9591A792E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitProjectManager.Persistence.EF", "GitProjectManager.Persistence.EF\GitProjectManager.Persistence.EF.csproj", "{63E46386-3D3E-44FD-BBA1-46F3C7785428}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitProjectManager.Core", "GitProjectManager.Core\GitProjectManager.Core.csproj", "{094F17FF-5077-4D13-B99E-0FB8F2F0DE48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitProjectManager.Frontend.WpfApp", "GitProjectManager.Frontend.WpfApp\GitProjectManager.Frontend.WpfApp.csproj", "{C452DDE1-6D64-4483-A3E5-40118F2AE5BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{FCC5F42D-7D4D-442E-8E3B-3EB9591A792E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCC5F42D-7D4D-442E-8E3B-3EB9591A792E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCC5F42D-7D4D-442E-8E3B-3EB9591A792E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63E46386-3D3E-44FD-BBA1-46F3C7785428}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63E46386-3D3E-44FD-BBA1-46F3C7785428}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63E46386-3D3E-44FD-BBA1-46F3C7785428}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63E46386-3D3E-44FD-BBA1-46F3C7785428}.Release|Any CPU.Build.0 = Release|Any CPU
+		{094F17FF-5077-4D13-B99E-0FB8F2F0DE48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{094F17FF-5077-4D13-B99E-0FB8F2F0DE48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{094F17FF-5077-4D13-B99E-0FB8F2F0DE48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{094F17FF-5077-4D13-B99E-0FB8F2F0DE48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C452DDE1-6D64-4483-A3E5-40118F2AE5BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C452DDE1-6D64-4483-A3E5-40118F2AE5BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C452DDE1-6D64-4483-A3E5-40118F2AE5BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C452DDE1-6D64-4483-A3E5-40118F2AE5BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
