@@ -11,6 +11,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 
 namespace GitProjectManagerApi {
+
   public class Startup {
     public Startup(IConfiguration configuration) {
       Configuration = configuration;
@@ -26,8 +27,12 @@ namespace GitProjectManagerApi {
         c.SwaggerDoc("v1", new OpenApiInfo { Title = "GitProjectManagerApi", Version = "v1" });
       });
 
+      //services.AddDbContext<GitProjectManagerDbContext>(
+      //  x => x.UseSqlServer(Configuration.GetConnectionString("ProductionConnetion"))
+      //);
+
       services.AddDbContext<GitProjectManagerDbContext>(
-        x => x.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))
+        x => x.UseSqlServer(Configuration.GetConnectionString("DefaultConnetion"))
       );
 
       services.AddScoped<IWorkItemRepository, WorkItemRepository>();

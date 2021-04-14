@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -20,6 +21,25 @@ namespace GitProjectManager.Frontend.WpfApp {
   public partial class MainWindow : Window {
     public MainWindow() {
       InitializeComponent();
+
+      //button.Click += Button_Click;
+    }
+
+    private async void OnClick1(object sender, RoutedEventArgs e) {
+
+      await GetStringAsync();
+      //Task<string> t = GetStringAsync();
+      //t.Wait();
+      //string text = t.Result;
+      
+
+    }
+
+    private async Task GetStringAsync() {
+      HttpClient client = new HttpClient();
+      //var responseString = await client.GetStringAsync("https://localhost:5001/WeatherForecast");
+      var responseString = await client.GetStringAsync("https://localhost:44331/weatherforecast");
+      button.Content = responseString;
     }
   }
 }

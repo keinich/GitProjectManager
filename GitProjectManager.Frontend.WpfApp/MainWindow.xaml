@@ -6,7 +6,17 @@
         xmlns:local="clr-namespace:GitProjectManager.Frontend.WpfApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="219*"/>
+      <RowDefinition Height="215*"/>
+    </Grid.RowDefinitions>
+    <Button x:Name="button" 
+            Margin="0,0,800,219" 
+            RenderTransformOrigin="0.5,0.5"
+            Click="OnClick1" ClickMode="Hover">
+      Click Me
+    </Button>
 
-    </Grid>
+  </Grid>
 </Window>
