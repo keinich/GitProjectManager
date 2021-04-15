@@ -28,16 +28,21 @@ namespace GitProjectManagerApi.Controllers {
 
     [HttpGet]
     public IEnumerable<WeatherForecast> Get() {
-      var workItems = _Repo.GetWorkItems().ToList();
+      if (_Repo is not null) {
 
-      var rng = new Random();
-      return Enumerable.Range(1, 5).Select(index => new WeatherForecast {
-        Date = DateTime.Now.AddDays(index),
-        TemperatureC = rng.Next(-20, 55),
-        Summary = Summaries[rng.Next(Summaries.Length)],
-        NumberOfWorkItems = workItems.Count
-      })
-      .ToArray();
+
+        var workItems = _Repo.GetWorkItems().ToList();
+
+        var rng = new Random();
+        return Enumerable.Range(1, 5).Select(index => new WeatherForecast {
+          Date = DateTime.Now.AddDays(index),
+          TemperatureC = rng.Next(-20, 55),
+          Summary = Summaries[rng.Next(Summaries.Length)],
+          NumberOfWorkItems = workItems.Count
+        }).ToArray();
+      } else {
+        return new List<WeatherForecast>() { new WeatherForecast { NumberOfWorkItems = 2 } };
+      }
     }
   }
 }
