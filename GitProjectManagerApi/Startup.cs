@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using System.Diagnostics;
 
 namespace GitProjectManagerApi {
 
@@ -27,16 +28,21 @@ namespace GitProjectManagerApi {
         c.SwaggerDoc("v1", new OpenApiInfo { Title = "GitProjectManagerApi", Version = "v1" });
       });
 
-      services.AddDbContext<GitProjectManagerDbContext>(
-        x => x.UseSqlServer(Configuration.GetConnectionString("ProductionConnetion"))
-      );
+      try {
+        services.AddDbContext<GitProjectManagerDbContext>(
+          x => x.UseSqlServer(Configuration.GetConnectionString("ProductionConnetion"))
+        );
+      }
+      catch (System.Exception) {
+        Trace.WriteLine("Exception when adding DbContext");        
+      }
 
       //services.AddDbContext<GitProjectManagerDbContext>(
       //  x => x.UseSqlServer(Configuration.GetConnectionString("DefaultConnetion"))
       //);
 
       services.AddScoped<IWorkItemRepository, WorkItemRepository>();
-  
+
       services.BuildServiceProvider().GetService<GitProjectManagerDbContext>().Database.Migrate();
 
     }
