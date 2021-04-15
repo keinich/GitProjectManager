@@ -32,18 +32,17 @@ namespace GitProjectManagerApi {
         services.AddDbContext<GitProjectManagerDbContext>(
           x => x.UseSqlServer(Configuration.GetConnectionString("ProductionConnetion"))
         );
+        services.AddScoped<IWorkItemRepository, WorkItemRepository>();
+        services.BuildServiceProvider().GetService<GitProjectManagerDbContext>().Database.Migrate();
       }
       catch (System.Exception) {
-        Trace.WriteLine("Exception when adding DbContext");        
+        Trace.WriteLine("Exception when adding DbContext");
       }
 
       //services.AddDbContext<GitProjectManagerDbContext>(
       //  x => x.UseSqlServer(Configuration.GetConnectionString("DefaultConnetion"))
       //);
 
-      services.AddScoped<IWorkItemRepository, WorkItemRepository>();
-
-      services.BuildServiceProvider().GetService<GitProjectManagerDbContext>().Database.Migrate();
 
     }
 
