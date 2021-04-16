@@ -12,7 +12,7 @@ namespace GitProjectManagerApi.Controllers {
   [Route("[controller]")]
   public class WeatherForecastController : ControllerBase {
 
-    //private readonly IWorkItemRepository _Repo;
+    private readonly IWorkItemRepository _Repo;
 
     private static readonly string[] Summaries = new[]
     {
@@ -21,9 +21,9 @@ namespace GitProjectManagerApi.Controllers {
 
     private readonly ILogger<WeatherForecastController> _logger;
 
-    public WeatherForecastController(ILogger<WeatherForecastController> logger) {
+    public WeatherForecastController(ILogger<WeatherForecastController> logger, IWorkItemRepository repo) {
       _logger = logger;
-      //_Repo = repo;
+      _Repo = repo;
     }
 
     [HttpGet]

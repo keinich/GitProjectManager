@@ -5,14 +5,15 @@ using System.Linq;
 namespace GitProjectManager.Persistence.EF.Repositories {
   public class WorkItemRepository : IWorkItemRepository {
 
-    private GitProjectManagerDbContext _Context;
+    //private GitProjectManagerDbContext _Context;
 
-    public WorkItemRepository(GitProjectManagerDbContext context) {
-      _Context = context;
+    public WorkItemRepository(/*GitProjectManagerDbContext context*/) {
+      //_Context = context;
     }
 
     public IQueryable<WorkItem> GetWorkItems() {
-      return _Context.WorkItems;
+      return null;
+      //return _Context.WorkItems;
     }
   }
 }

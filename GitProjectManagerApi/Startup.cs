@@ -38,7 +38,7 @@ namespace GitProjectManagerApi {
       catch (System.Exception) {
         Trace.WriteLine("Exception when adding DbContext");
       }
-
+            
       //services.AddDbContext<GitProjectManagerDbContext>(
       //  x => x.UseSqlServer(Configuration.GetConnectionString("DefaultConnetion"))
       //);
