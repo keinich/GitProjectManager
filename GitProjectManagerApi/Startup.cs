@@ -28,17 +28,17 @@ namespace GitProjectManagerApi {
         c.SwaggerDoc("v1", new OpenApiInfo { Title = "GitProjectManagerApi", Version = "v1" });
       });
 
+      services.AddScoped<IWorkItemRepository, WorkItemRepository>();
       try {
         services.AddDbContext<GitProjectManagerDbContext>(
           x => x.UseSqlServer(Configuration.GetConnectionString("ProductionConnetion"))
         );
-        services.AddScoped<IWorkItemRepository, WorkItemRepository>();
         services.BuildServiceProvider().GetService<GitProjectManagerDbContext>().Database.Migrate();
       }
       catch (System.Exception) {
         Trace.WriteLine("Exception when adding DbContext");
       }
-            
+
       //services.AddDbContext<GitProjectManagerDbContext>(
       //  x => x.UseSqlServer(Configuration.GetConnectionString("DefaultConnetion"))
       //);
