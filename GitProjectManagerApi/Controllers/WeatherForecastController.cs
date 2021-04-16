@@ -12,7 +12,7 @@ namespace GitProjectManagerApi.Controllers {
   [Route("[controller]")]
   public class WeatherForecastController : ControllerBase {
 
-    private readonly IWorkItemRepository _Repo;
+    //private readonly IWorkItemRepository _Repo;
 
     private static readonly string[] Summaries = new[]
     {
@@ -21,28 +21,28 @@ namespace GitProjectManagerApi.Controllers {
 
     private readonly ILogger<WeatherForecastController> _logger;
 
-    public WeatherForecastController(ILogger<WeatherForecastController> logger, IWorkItemRepository repo) {
+    public WeatherForecastController(ILogger<WeatherForecastController> logger) {
       _logger = logger;
-      _Repo = repo;
+      //_Repo = repo;
     }
 
     [HttpGet]
     public IEnumerable<WeatherForecast> Get() {
-      if (_Repo is not null) {
+      //if (_Repo is not null) {
 
 
-        var workItems = _Repo.GetWorkItems().ToList();
+      //  var workItems = _Repo.GetWorkItems().ToList();
 
-        var rng = new Random();
-        return Enumerable.Range(1, 5).Select(index => new WeatherForecast {
-          Date = DateTime.Now.AddDays(index),
-          TemperatureC = rng.Next(-20, 55),
-          Summary = Summaries[rng.Next(Summaries.Length)],
-          NumberOfWorkItems = workItems.Count
-        }).ToArray();
-      } else {
+      //  var rng = new Random();
+      //  return Enumerable.Range(1, 5).Select(index => new WeatherForecast {
+      //    Date = DateTime.Now.AddDays(index),
+      //    TemperatureC = rng.Next(-20, 55),
+      //    Summary = Summaries[rng.Next(Summaries.Length)],
+      //    NumberOfWorkItems = workItems.Count
+      //  }).ToArray();
+      //} else {
         return new List<WeatherForecast>() { new WeatherForecast { NumberOfWorkItems = 2 } };
-      }
+      //}
     }
   }
 }
