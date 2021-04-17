@@ -26,6 +26,8 @@ namespace GitProjectManagerApi.Controllers {
       _Repo = repo;
     }
 
+    public static string StartupLog = "Empty";
+
     [HttpGet]
     public IEnumerable<WeatherForecast> Get() {
       //if (_Repo is not null) {
@@ -41,7 +43,7 @@ namespace GitProjectManagerApi.Controllers {
       //    NumberOfWorkItems = workItems.Count
       //  }).ToArray();
       //} else {
-        return new List<WeatherForecast>() { new WeatherForecast { NumberOfWorkItems = 2 } };
+        return new List<WeatherForecast>() { new WeatherForecast { NumberOfWorkItems = 2, Summary = StartupLog} };
       //}
     }
   }

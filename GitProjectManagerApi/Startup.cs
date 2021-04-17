@@ -35,7 +35,8 @@ namespace GitProjectManagerApi {
         );
         services.BuildServiceProvider().GetService<GitProjectManagerDbContext>().Database.Migrate();
       }
-      catch (System.Exception) {
+      catch (System.Exception ex) {
+        Controllers.WeatherForecastController.StartupLog = ex.Message + ex.StackTrace;
         Trace.WriteLine("Exception when adding DbContext");
       }
 
