@@ -5,18 +5,57 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GitProjectManager.Frontend.WpfApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-  <Grid>
-    <Grid.RowDefinitions>
-      <RowDefinition Height="219*"/>
-      <RowDefinition Height="215*"/>
-    </Grid.RowDefinitions>
-    <Button x:Name="button" 
-            Margin="0,0,800,219" 
-            RenderTransformOrigin="0.5,0.5"
-            Click="OnClick1" ClickMode="Hover">
-      Click Me
-    </Button>
+        Title="MainWindow" Height="450" Width="800"
+        WindowStyle="SingleBorderWindow"
+        ResizeMode="CanResize"
+        Background="Transparent"
+        AllowsTransparency="False">
+  <Border Background="#272637"
+          CornerRadius="5">
+    <Grid>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="200"/>
+        <ColumnDefinition/>
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="75"/>
+        <RowDefinition/>
+      </Grid.RowDefinitions>
+    <TextBlock Text="Code Witch"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Left"
+               Foreground="White"
+               FontSize="22"
+               Margin="20,0,0,0"/>
+      <StackPanel Grid.Row="1" >
 
-  </Grid>
+        <RadioButton Content="Git"
+                     Height="50"
+                     Foreground="White"
+                     FontSize="20"
+                     Style="{StaticResource MenuButtonTheme}"/>
+
+        <RadioButton Content="Board"
+                     Height="50"
+                     Foreground="White"
+                     FontSize="20"
+                     Style="{StaticResource MenuButtonTheme}"/>
+
+        <RadioButton Content="Home"
+                     Height="50"
+                     Foreground="White"
+                     FontSize="20"
+                     Style="{StaticResource MenuButtonTheme}"/>
+
+        <RadioButton Content="Home"
+                     Height="50"
+                     Foreground="White"
+                     FontSize="20"
+                     Style="{StaticResource MenuButtonTheme}"/>
+
+      </StackPanel>
+    </Grid>
+
+
+  </Border>
 </Window>

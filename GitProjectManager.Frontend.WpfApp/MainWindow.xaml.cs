@@ -39,7 +39,7 @@ namespace GitProjectManager.Frontend.WpfApp {
       HttpClient client = new HttpClient();
       //var responseString = await client.GetStringAsync("https://localhost:5001/WeatherForecast");
       var responseString = await client.GetStringAsync("https://localhost:44331/weatherforecast");
-      button.Content = responseString;
+      //button.Content = responseString;
     }
   }
 }

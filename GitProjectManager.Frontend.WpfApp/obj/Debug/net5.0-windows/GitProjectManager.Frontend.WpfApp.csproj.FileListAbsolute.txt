@@ -20,3 +20,5 @@ D:\Raftek\GitProjectManager\GitProjectManager.Frontend.WpfApp\obj\Debug\net5.0-w
 D:\Raftek\GitProjectManager\GitProjectManager.Frontend.WpfApp\obj\Debug\net5.0-windows\ref\GitProjectManager.Frontend.WpfApp.dll
 D:\Raftek\GitProjectManager\GitProjectManager.Frontend.WpfApp\obj\Debug\net5.0-windows\GitProjectManager.Frontend.WpfApp.pdb
 D:\Raftek\GitProjectManager\GitProjectManager.Frontend.WpfApp\obj\Debug\net5.0-windows\GitProjectManager.Frontend.WpfApp.genruntimeconfig.cache
+D:\Raftek\GitProjectManager\GitProjectManager.Frontend.WpfApp\obj\Debug\net5.0-windows\Themes\MenuButtonTheme.baml
+D:\Raftek\GitProjectManager\GitProjectManager.Frontend.WpfApp\obj\Debug\net5.0-windows\App.baml
