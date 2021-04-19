@@ -13,7 +13,8 @@
 
               <TextBlock Text="{TemplateBinding Property =Content}"
                          VerticalAlignment="Center"
-                         Margin="50,0,0,0"/>
+                         HorizontalAlignment="Center"
+                         Margin="10,0,10,0"/>
             </Grid>
           </ControlTemplate>
         </Setter.Value>
@@ -26,6 +27,9 @@
     <Style.Triggers>
       <Trigger Property="IsChecked" Value="True">
         <Setter Property="Background" Value="#22202f"/>
+      </Trigger>
+      <Trigger Property="IsMouseOver" Value="True">
+        <Setter Property="Background" Value="#645F5E"/>
       </Trigger>
     </Style.Triggers>
 
